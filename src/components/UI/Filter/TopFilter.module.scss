@@ -1,0 +1,37 @@
+.top_filter {
+  background-color: rgb(87, 1, 87);
+  position: absolute;
+  z-index: 1;
+  box-shadow: 0 16px 16px rgba(0, 0, 0, 0.2);
+
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.top_filter_list {
+  list-style-type: none;
+}
+
+.top_filter_list_item {
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  text-align: center;
+
+  padding: 8px;
+
+  transition: background-color 0.3s;
+  cursor: pointer;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+  &:hover {
+    background-color: rgba(255, 233, 37, 0.7);
+  }
+}
+
+.top_filter_list_item:last-child {
+  border: none;
+}

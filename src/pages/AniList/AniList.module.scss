@@ -1,0 +1,26 @@
+.anilist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  margin-top: 24px;
+}
+
+.anilist_title {
+  margin-bottom: 24px;
+}
+
+.anilist_content {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+}
+
+.inf_el {
+  height: 5px;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  display: inline;
+}

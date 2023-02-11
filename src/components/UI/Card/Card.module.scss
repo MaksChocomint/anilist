@@ -1,0 +1,80 @@
+.anilist_card {
+  width: 200px;
+  position: relative;
+  &:hover {
+    .anilist_card_img {
+      transition: all 0.5s;
+      scale: 1.12;
+      position: relative;
+      z-index: 2;
+    }
+
+    .anilist_card_info {
+      display: none;
+    }
+
+    &::selection {
+      display: none;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -13px;
+    left: -9px;
+
+    width: 400px;
+    height: 302.5px;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    pointer-events: none;
+    transition: 0.5s;
+  }
+}
+
+.anilist_card_hover {
+  &::before {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+}
+
+.anilist_card_unhover {
+  &::before {
+    transition: none;
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+.anilist_card_img {
+  border-radius: 30px;
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.anilist_card_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+
+.anilist_card_info_title {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-weight: 500;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.anilist_card_info_type {
+  font-weight: 300;
+  font-style: italic;
+}
+.anilist_card_info_year {
+  font-weight: 400;
+  place-self: end;
+}
